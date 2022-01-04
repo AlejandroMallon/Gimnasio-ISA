@@ -1,10 +1,51 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="es">
 <head> 
-    <title>Getting Started: Serving Web Content</title> 
+    <title>Gimnasio</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewpoint" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximun-scale=3.0, minimun-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/01074756ef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+
+
+
+
+
+
 </head>
 <body>
-    <p>Get your greeting <a href="/greeting">here</a></p>
+    <header>
+
+    </header>
+    <!--
+    <p> Bienvenido a Gimnasio Paco </p>
+    <p>Acceda al gimnasio <a href="/greeting">aqui</a></p>
+    -->
+
+    <form class="formulario">
+        <h1>Regístrate</h1>
+        <div class="contenedor">
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <input type="text" placeholder="Nombre Completo">
+            </div>
+
+            <div class="contenedor">
+                <div class="input-contenedor">
+                    <i class="far fa-envelope icon"></i>
+                    <input type="text" placeholder="Correo Electrónico">
+                </div>
+
+                <div class="contenedor">
+                    <div class="input-contenedor">
+                        <i class="fas fa-key icon"></i>
+                        <input type="password" placeholder="Contraseña">
+                    </div>
+                <input type="submit" value="Registrar" class="button">
+                <p>Al registrarte, aceptas nuestras Condiciones de uso y políticas de privacidad</p>
+                <p>¿Ya tienes cuenta? <a class="link" href="loginvista.html">Iniciar Sesión</a></p>
+        </div>
+    </form>
 </body>
 </html>
