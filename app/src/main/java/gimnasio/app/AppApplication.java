@@ -14,6 +14,7 @@ public class AppApplication {
 		Director director = new Director ("11292716J");
 
         Socio socio1 = new Socio("socio@gimnasio.com");
+        
 
         director.setId(UUID.randomUUID());
         socio1.setNumero_socio(UUID.randomUUID());
