@@ -1,5 +1,6 @@
 package gimnasio.app;
 
+import java.util.ArrayList;
 import java.util.UUID;
 
 import org.springframework.boot.SpringApplication;
@@ -11,10 +12,12 @@ public class AppApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AppApplication.class, args);
 
-		Director director = new Director ("11292716J");
+        ArrayList<Director> dir = new ArrayList<Director>();
 
+
+		Director director = new Director ("11292716J");
         Socio socio1 = new Socio("socio@gimnasio.com");
-        
+
 
         director.setId(UUID.randomUUID());
         socio1.setNumero_socio(UUID.randomUUID());

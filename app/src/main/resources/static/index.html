@@ -25,28 +25,28 @@
     <p>Acceda al gimnasio <a href="/greeting">aqui</a></p>
     -->
 
-    <form class="formulario">
+    <form action="altaDirector" class="formulario" method="post">
         <h1>Regístrate</h1>
         <div class="contenedor">
             <div class="input-contenedor">
                 <i class="fas fa-user icon"></i>
-                <input type="text" placeholder="Nombre Completo">
+                <input type="text" name= "nombre" placeholder="Nombre Completo">
             </div>
 
             <div class="contenedor">
                 <div class="input-contenedor">
                     <i class="far fa-envelope icon"></i>
-                    <input type="text" placeholder="Correo Electrónico">
+                    <input type="text" name="correo" placeholder="Correo Electrónico">
                 </div>
 
                 <div class="contenedor">
                     <div class="input-contenedor">
                         <i class="fas fa-key icon"></i>
-                        <input type="password" placeholder="Contraseña">
+                        <input type="password" name="p" placeholder="Contraseña">
                     </div>
-                <input type="submit" value="Registrar" class="button">
+                <button type="submit" value="Registrar" class="button">Registrar</button>
                 <p>Al registrarte, aceptas nuestras Condiciones de uso y políticas de privacidad</p>
-                <p>¿Ya tienes cuenta? <a class="link" href="loginvista.html">Iniciar Sesión</a></p>
+                <p>¿Ya tienes cuenta? <a class="link" href="/iniciarSesion">Iniciar Sesión</a></p>
         </div>
     </form>
 </body>

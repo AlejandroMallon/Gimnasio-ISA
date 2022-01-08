@@ -13,6 +13,7 @@ public class Empleado {
     private String contraseña;
     private UUID id;
     private String tipo_empleado;
+    private String correo;
 
     public Empleado() {
 
@@ -22,6 +23,25 @@ public class Empleado {
         this.dni = dni;
 
     }
+
+    public Empleado (String nombre, String correo, String passw){
+        this.nombre=nombre;
+        this.contraseña=passw;
+        this.correo=correo;
+    }
+    
+
+    public String getCorreo() {
+        return correo;
+    }
+
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+
+   
 
     public String getDni() {
         return dni;
