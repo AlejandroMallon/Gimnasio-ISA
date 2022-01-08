@@ -8,11 +8,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class AppApplication {
-
+    public static ArrayList<Director> ldir = new ArrayList<Director>();
 	public static void main(String[] args) {
 		SpringApplication.run(AppApplication.class, args);
 
-        ArrayList<Director> dir = new ArrayList<Director>();
+        
+        
 
 
 		Director director = new Director ("11292716J");
