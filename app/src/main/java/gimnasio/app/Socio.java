@@ -9,14 +9,14 @@ public class Socio {
     private String telefono;
     private String email;
     private String cuenta_bancaria;
-    private char tipo_cuota; //E (estudiante) J(jubilado) N(normal) V(vip) etc
+    private String tipo_cuota; //E (estudiante) J(jubilado) N(normal) V(vip) etc
     private int asistencia;
     private String contraseña;
 
 
     //public Socio(  ){}
 
-    public Socio (String nombre, String telefono, String email, String cuenta_bancaria, char tipo_cuota){
+    public Socio (String nombre, String telefono, String email, String cuenta_bancaria, String tipo_cuota){
         this.nombre=nombre;
         this. telefono=telefono;
         this.email=email;
@@ -75,11 +75,11 @@ public class Socio {
         this.cuenta_bancaria = cuenta_bancaria;
     }
 
-    public char getTipo_cuota() {
+    public String getTipo_cuota() {
         return tipo_cuota;
     }
 
-    public void setTipo_cuota(char tipo_cuota) {
+    public void setTipo_cuota(String tipo_cuota) {
         this.tipo_cuota = tipo_cuota;
     }
 

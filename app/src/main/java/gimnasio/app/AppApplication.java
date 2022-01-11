@@ -1,15 +1,17 @@
 package gimnasio.app;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
 public class AppApplication {
     public static ArrayList<Director> ldir = new ArrayList<Director>();
-    public static ArrayList<Socio> lsocios = new ArrayList<Socio>();
+    public static List<Socio> lsocios = new ArrayList<>();
 	public static void main(String[] args) {
 		SpringApplication.run(AppApplication.class, args);
 

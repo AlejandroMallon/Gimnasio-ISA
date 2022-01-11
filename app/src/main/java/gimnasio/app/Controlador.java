@@ -20,21 +20,6 @@ public class Controlador {
 		return "greeting";
 	}
 
-	
-
-	
-
-	@GetMapping(value = "/tablaSocios")
-    public String tablaSocios(@RequestParam(name = "name", required = false, defaultValue = "World") String name, Model model) {
-        model.addAttribute("name", name);
-		model.addAttribute("titulo", "nombreAplicacion");
-        model.addAttribute("socios", AppApplication.lsocios);
-
-        return "lista";
-
-	
-}
-
 		@GetMapping("/menuDirector")
 		public String menuDirector(@RequestParam(name = "name", required = false, defaultValue = "World") String name,
 				Model model) {
@@ -62,12 +47,12 @@ public class Controlador {
 			model.addAttribute("name", name);
 			return "error";
 		}
-		/*@GetMapping("/tablaSocios")
-		public String tablaSocios(@RequestParam(name = "name", required = false, defaultValue = "World") String name,
-				Model model) {
-			model.addAttribute("name", name);
-			return "tablaSocios";
-		}*/
+		// @GetMapping("/tablaSocios")
+		// public String tablaSocios(@RequestParam(name = "name", required = false, defaultValue = "World") String name,
+		// 		Model model) {
+		// 	model.addAttribute("name", name);
+		// 	return "tablaSocios";
+		// }
 
 		@RequestMapping("validador")
 		public ModelAndView getValidaLogin(HttpServletRequest req, HttpServletResponse resp) {
@@ -112,14 +97,17 @@ public class Controlador {
 			String telefono = req.getParameter("telefono");
 			String email = req.getParameter("email");
 			String cuenta_bancaria = req.getParameter("cuenta_bancaria");
-			String t_cuota = req.getParameter("tipo_cuota");
-			char tipo_cuota = t_cuota.charAt(0);
+			String tipo_cuota = req.getParameter("tipo_cuota");
+			
+			
 
 			Socio socio = new Socio(nombre, telefono, email, cuenta_bancaria, tipo_cuota);
 
 			AppApplication.lsocios.add(socio);
-			modelo.setViewName("menuDirector");
+			modelo.setViewName("tablaSocios");
 			return modelo;
 
 		}
 }
+
+
