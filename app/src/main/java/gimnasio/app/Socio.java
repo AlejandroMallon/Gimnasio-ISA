@@ -14,9 +14,17 @@ public class Socio {
     private String contraseña;
 
 
-    public Socio (){
+    //public Socio(  ){}
 
+    public Socio (String nombre, String telefono, String email, String cuenta_bancaria, char tipo_cuota){
+        this.nombre=nombre;
+        this. telefono=telefono;
+        this.email=email;
+        this.cuenta_bancaria=cuenta_bancaria;
+        this.tipo_cuota=tipo_cuota;
     }
+    
+    
     /*public static UUID generateType4UUID() {
             UUID uuid = UUID.randomUUID();
             return uuid;
@@ -90,10 +98,5 @@ public class Socio {
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
     }
-
-    
-
-
-
     
 }
