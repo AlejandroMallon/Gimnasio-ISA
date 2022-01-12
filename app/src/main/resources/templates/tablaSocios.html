@@ -1,37 +1,53 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="layout/layout::head">
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+
+<head>
+    <title>Menu Inicio</title> 
+    <link rel="stylesheet" href="tablaSocios.css">
 </head>
+
 <body>
-    <header th:replace="layout/layout::header"></header>
+    <h1 th:text="${mensaje}">Ruben</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <!-- <th class="text-center" scope="col">Date</th> -->
+                <th scope="col">Socio</th>
+                <th scope="col">Datos</th>
+                <th scope="col">Acciones</th>
+                <!-- <th class="text-center" scope="col">Venue</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="inner-box" th:each="socio:${socios}">
+                <td>
+                    <div class="event-img">
+                        <h3 th:text="${socio.nombre}"></h3>
+                    </div>
+                </td>
+                <td>
+                    <div class="event-wrap">
+                        <h4 th:text="${socio.email}"></h4>
+                        <div class="meta">
+                            <div class="categories">
+                                <a th:text="${socio.telefono}"></a>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="r-no">
 
-    <div class="container">
-        <div class="card bg-dark">
-            <div class="card-header">
-                <h3>Lista de productos</h3>
-            </div>
-            <div class="card-body">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Email</th>               
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr th:each="socio: ${socios}">
-                            <td th:text="${socio.id}"></td>
-                            <td th:text="${socio.email}"></td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                    </tfoot>
-                </table>
-            </div>
-        </div>
-    </div>
+                        <a class="btn btn-primary" href="#">Eliminar</a>
+                    </div>
+                </td>
+            </tr>
+    </table>
 
-    <footer th:replace="layout/layout::footer" class="bg-dark"></footer>
+
+
+
 </body>
+
 </html>

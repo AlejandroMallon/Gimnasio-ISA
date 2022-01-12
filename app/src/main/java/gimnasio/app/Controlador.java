@@ -1,5 +1,9 @@
 package gimnasio.app;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -47,12 +51,24 @@ public class Controlador {
 			model.addAttribute("name", name);
 			return "error";
 		}
-		// @GetMapping("/tablaSocios")
-		// public String tablaSocios(@RequestParam(name = "name", required = false, defaultValue = "World") String name,
-		// 		Model model) {
-		// 	model.addAttribute("name", name);
-		// 	return "tablaSocios";
-		// }
+
+		@GetMapping("/tablaSocios")
+		public String tablaSocios(Model model) {
+			List<String> socioNombre = new ArrayList<>();
+			List<String> socioEmail = new ArrayList<>();
+			for(int i=0;i<AppApplication.lsocios.size();i++){
+				socioEmail.add(AppApplication.lsocios.get(i).getEmail());
+				socioNombre.add(AppApplication.lsocios.get(i).getNombre());
+			}
+			model.addAttribute("mensaje", "Hola buenas");
+			model.addAttribute("sociosEmail", socioEmail);
+			model.addAttribute("sociosNombre", socioNombre);
+			model.addAttribute("socios", AppApplication.lsocios);
+
+
+			
+			return "tablaSocios";
+		}
 
 		@RequestMapping("validador")
 		public ModelAndView getValidaLogin(HttpServletRequest req, HttpServletResponse resp) {
